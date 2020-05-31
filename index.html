@@ -7,20 +7,22 @@
 <title>Itsasois</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- enlaces a los estilos CSS--> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  <!-- los enlaces, siempre con atributo href--> 
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- enlace a CSS de Leaflet para el visor basico -->
 <link rel="stylesheet" href="codigo_js/leaflet.css"/>
 
 <!-- En el estilo indico como van a ser los encabezados h1:h6... -->
 <style>
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
-/* Indico la anchura que btienen la barra lateral*/
+/* Indico la anchura que tiene la barra lateral*/
 .w3-sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+/* Indicar un margen de la misma anchura que la barra lateral */
 #main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
+/*Eliminar los margenes en la visualizacion en pantallas pequeñas */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
 </style> <!-- Cierro el estilo ... -->
 
@@ -34,14 +36,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     Your browser does not support the audio element.
   </audio>
 
-<!-- Como va a ser la barra de la izauiersda de iconos (en pantallas pequeñas no se visualizara) -->
+<!-- Como va a ser la barra de la izquierda de iconos (en pantallas pequeñas no se visualizara) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <!-- Inserto una imagen  -->
   <img src="images\montaña4.jpg" style="width:100%">
   <!-- Los diferentes apartado de la barra: home, sobre mi, trabajos, contacto  -->
   <a href="#" class="w3-bar-item w3-button w3-padding-large w3-black">
     <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
+    <p>HOME</p> <!-- la p es el etiquetado de párrafos  -->
   </a>
   <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-user w3-xxlarge"></i>
@@ -52,7 +54,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p>TRABAJOS</p>
   </a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlnarge"></i>
+    <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACTO</p>
   </a>
 </nav>
@@ -61,9 +63,10 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-padding-large" id="main">
   <!-- Encabezado de primer orden h1-->
   <header class="w3-container w3-padding-32 w3-center w3-black" id="home">
-    <h1 class="w3-jumbo"><span class="w3-hide-small">Itsaso</span> Ilzarbe.</h1>
+    <h1 class="w3-jumbo"><span class="w3-hide-small">Itsaso</span> Ilzarbe.</h1> 
+    
     <p>Ambientóloga.</p>
-    <img src="images\foto_camping3.jpg" alt="boy" class="w3-image" width="850" height="100"> <!-- Inserto una imagen -->
+    <img src="images\foto_camping3.jpg" alt="boy" class="w3-image" width="850" height="100"> <!-- Inserto la imagen para la cabecera -->
   </header>
 
   <!-- Encabezado de segundo orden h2-->
@@ -77,6 +80,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
  <!--Realizamos la linea de tiempo -->
 
+  <!--Indico en que lado estaran los recuadros de la linea de tiempo y la informacion que ira detnro de ellos -->
  <div class="timeline">
      <div class="container left">
        <div class="content">
@@ -117,12 +121,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       box-sizing: border-box;
     }
     
-    /* Set a background color */
+    /* Ponemos un color de fondo. Esto es CSS y podemos controlar como se muestran los elementos del html, en este caso el cuerpo */
     body {
       font-family: Helvetica, sans-serif;
     }
     
-    /* The actual timeline (the vertical ruler) */
+    /*Linea vertical del tiempo */
     .timeline {
       position: relative;
       max-width: 1200px;
@@ -163,17 +167,17 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       z-index: 1;
     }
     
-    /* Place the container to the left */
+    /* Recuadro de la izquierda */
     .left {
       left: 0;
     }
     
-    /* Place the container to the right */
+    /* Recuadro de la derecha */
     .right {
       left: 50%;
     }
     
-    /* Add arrows to the left container (pointing right) */
+    /* Añadimos flecha a los recuadros de la izquierda, mirando hacia la derecha */
     .left::before {
       content: " ";
       height: 0;
@@ -187,7 +191,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       border-color: transparent transparent transparent white;
     }
     
-    /* Add arrows to the right container (pointing left) */
+    /* Añadimos flecha a los recuadros de la derecha, mirando hacia la izquierda */
     .right::before {
       content: " ";
       height: 0;
@@ -201,7 +205,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       border-color: transparent white transparent transparent;
     }
     
-    /* Fix the circle for containers on the right side */
+    /* Fijar el circulo para los rectangulos de la derecha */
     .right::after {
       left: -16px;
     }
@@ -236,11 +240,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         border-color: transparent white transparent transparent;
       }
     
-    /* Make sure all circles are at the same spot */
-      .left::after, .right::after {
-        left: 15px;
-      }
-    
+ /* Make sure all circles are at the same spot */
+ .left::after, .right::after {
+    left: 15px;
+  }
+
     /* Make all right containers behave like the left ones */
       .right {
         left: 0%;
@@ -248,17 +252,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     }
  
  </style>
-   
-
-  <!-- End About Section -->
+  <!-- se acaba la seccion del timeline -->
   </div>
   
-  <!-- Portfolio Section -->
+  <!-- Seccion de algunos de mis trabajos -->
   <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="photos">
     <h2 class="w3-text-light-grey">Algunos de mis trabajos</h2>
     <hr style="width:200px" class="w3-opacity">
-
-    <!-- Grid for photos -->
+<br> 
+    <!-- Pongo una foto y un video -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
         <img src="images\mapa_final.jpg" style="width:100%">
@@ -269,7 +271,8 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
         </video>
         </div>
     
-   <!-- enlace a JS de Leaflet v. 1.6.0 (justo tras CSS) -->
+   <!--Comienzo el  visor basico -->     
+   <!-- enlace a  de Leaflet v. 1.6.0  -->
    <script src="codigo_js/leaflet.js">
    </script>
 
@@ -305,10 +308,9 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           var OSM_mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
               maxZoom: 19,
               attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-          });
+          }); // los enlaces, siempre con atributo href
           
           OSM_mapnik.addTo(mapa1)
-          
           
           // añadimos punto (marcador)
           
@@ -316,15 +318,15 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
             punto.addTo(mapa1);           // se añade al mapa
           
           
-          // Incluir capa de Comarcas desde GeoJSON
+          // Incluir capa de los municipios de Navarra desde GeoJSON
           
           var navarra = L.geoJSON(navarra); // genero capa leaflet
           navarra.addTo(mapa1)               // la cargo al mapa
           
-          // Incluir capa de Municipios de Huesca desde GeoJSON
+          //Incluyo la capa de los parques naturales desde GeoJSON
           
-          var parques = L.geoJSON( // crear objeto municipios como capa geojson
-          parques, {             // código a cargar: `municipios`
+          var parques = L.geoJSON( // crear objeto parques como capa geojson
+          parques, {             // código a cargar: `parques`
             color: 'green',             // estilo color
             fillColor: 'green',        //        color de relleno
             fillOpacity: 0.2,         //        opacidad de relleno
@@ -334,7 +336,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           
           // INICIO de código de Control de capas
           
-          // CAPAS BASE - que puedo intercambiar
+          // CAPAS BASE - 
           var baseMaps = {                  // variable con apartado de mapas base
               "OpenStreetMap": OSM_mapnik,  // elemento a incluir y descripción
               //"Imagen PNOA": PNOA1
@@ -362,21 +364,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
           L.control.scale().addTo(mapa1);
           
           </script>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-        <img src="images\mapa_final.jpg" style="width:100%">
-      </div>
+<!--Final del visor basico -->
 
-
+<br>  <!-- salto de lineas -->
+<br>
+<br>
+<br>
       </div>
-    <!-- End photo grid -->
-    </div>
+   
   <!-- End Portfolio Section -->
   </div>
 
